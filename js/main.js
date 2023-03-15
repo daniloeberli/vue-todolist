@@ -38,7 +38,7 @@ createApp({
             this.toDos.splice(this.toDos.indexOf(todo), 1);
         },
         addToDo() {
-            if (this.newToDo.length > 0) {
+            if (this.newToDo.trim().length > 0) {
                 this.toDos.push({
                     text: this.newToDo,
                     done: false
