@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        doneClass: 'done',
         toDos : [
             {
                 text: 'Buy milk',
