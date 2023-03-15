@@ -36,7 +36,7 @@
                     <ul class="list-group">
                         <li v-for="todo in toDos"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <div :class="{done: todo.done}">{{todo.text}}</div>
+                            <div @click="toggleDone(todo)" :class="{done: todo.done}">{{todo.text}}</div>
                             <i role="button" class="fa-solid fa-xmark" @click="removeToDo(todo)"></i>
                         </li>
                     </ul>

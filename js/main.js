@@ -45,6 +45,11 @@ createApp({
                 })
             };
             this.newToDo = '';
-        }
+        },
+        toggleDone(todo) {
+            console.log('toggle');
+            //come "togglare" un valore booleano
+            todo.done =!todo.done;
+        },
     }
 }).mount('#app')
