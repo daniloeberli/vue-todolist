@@ -23,7 +23,7 @@ createApp({
 
                 {
                     text: 'Learn Vue.js',
-                    done: false
+                    done: true
                 },
 
                 {
