@@ -27,7 +27,7 @@
                         <!--v-bind broken !!!!-->
                         <li v-for="todo in toDos" :class="todo.done && 'doneClass' " class="list-group-item d-flex justify-content-between align-items-center">
                             <div>{{todo.text}}</div>
-                            <i role="button" class="fa-solid fa-xmark"></i>
+                            <i role="button" class="fa-solid fa-xmark" @click="removeToDo(todo)"></i>
                         </li>
                     </ul>
                 </div>

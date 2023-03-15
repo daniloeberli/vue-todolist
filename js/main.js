@@ -31,5 +31,13 @@ const { createApp } = Vue
             }
         ]
       }
+    },
+    methods: {
+        removeToDo(todo){
+            //console.log('clicked');
+            //console.log(todo);
+            //console.log(this.toDos.indexOf(todo));
+            this.toDos.splice(this.toDos.indexOf(todo),1);
+        }
     }
   }).mount('#app')
