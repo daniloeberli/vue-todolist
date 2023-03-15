@@ -21,6 +21,17 @@
     <div id="app">
         <h1 class="text-center mb-3">Vue toDo List</h1>
         <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="input-group mb-4">
+                        <input type="text" @keyup.enter="addToDo" v-model="newToDo" class="form-control" placeholder="Inserisci nuovo toDo">
+                        <button @click="addToDo" class="btn btn-outline-info" type="button">Aggiungi</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--to do list -->
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <ul class="list-group">

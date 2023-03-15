@@ -1,43 +1,50 @@
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
-      return {
-        doneClass: 'done',
-        toDos : [
-            {
-                text: 'Buy milk',
-                done: false
-            },
+        return {
+            doneClass: 'done',
+            newToDo: '',
+            toDos: [
+                {
+                    text: 'Buy milk',
+                    done: false
+                },
 
-            {
-                text: 'Drink tea',
-                done: true
-            },
+                {
+                    text: 'Drink tea',
+                    done: true
+                },
 
-            {
-                text: 'Pay rent',
-                done: false
-            },
+                {
+                    text: 'Pay rent',
+                    done: false
+                },
 
-            {
-                text: 'Learn Vue.js',
-                done: false
-            },
+                {
+                    text: 'Learn Vue.js',
+                    done: false
+                },
 
-            {
-                text: 'Practice German',
-                done: false
-            }
-        ]
-      }
+                {
+                    text: 'Practice German',
+                    done: false
+                }
+            ]
+        }
     },
     methods: {
-        removeToDo(todo){
-            //console.log('clicked');
-            //console.log(todo);
-            //console.log(this.toDos.indexOf(todo));
-            this.toDos.splice(this.toDos.indexOf(todo),1);
+        removeToDo(todo) {
+            this.toDos.splice(this.toDos.indexOf(todo), 1);
+        },
+        addToDo() {
+            if (this.newToDo.length > 0) {
+                this.toDos.push({
+                    text: this.newToDo,
+                    done: false
+                })
+            };
+            this.newToDo = '';
         }
     }
-  }).mount('#app')
+}).mount('#app')
