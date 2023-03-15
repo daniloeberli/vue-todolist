@@ -27,6 +27,8 @@
                         <input type="text" @keyup.enter="addToDo" v-model="newToDo" class="form-control"
                             placeholder="Inserisci nuovo toDo">
                         <button @click="addToDo" class="btn btn-outline-info" type="button">Aggiungi</button>
+                        <!--funzionalità extra non richiesta dalla consegna-->
+                        <button @click="clearCompleted" class="btn btn-outline-danger" type="button">Cancella task completati</button>
                     </div>
                 </div>
             </div>

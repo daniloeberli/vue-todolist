@@ -13,7 +13,7 @@ createApp({
 
                 {
                     text: 'Drink tea',
-                    done: true
+                    done: false
                 },
 
                 {
@@ -23,7 +23,7 @@ createApp({
 
                 {
                     text: 'Learn Vue.js',
-                    done: true
+                    done: false
                 },
 
                 {
@@ -51,5 +51,9 @@ createApp({
             //come "togglare" un valore booleano
             todo.done =!todo.done;
         },
+        //funzionalità extra non richiesta dalla consegna
+        clearCompleted() {
+            this.toDos = this.toDos.filter(todo =>!todo.done);
+        }
     }
 }).mount('#app')
